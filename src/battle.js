@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Batch from './batch';
 import BattleCard from './battlecard';
-//import BattleCard from './battlecard';
 
 class Battle extends Component {
     constructor() {
