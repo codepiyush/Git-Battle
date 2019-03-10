@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './navbar';
 import Battle from "./battle"
 import "./index.css";
+import Top from './repos'
 
 class App extends Component {
 
@@ -12,7 +13,9 @@ class App extends Component {
                     <Navbar value='1'/>
                     <Battle/>
                 </div>
-                
+                <div id="topten">
+                    <Top/>
+                </div>
                 
             </React.Fragment>
         )
