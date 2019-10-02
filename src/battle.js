@@ -25,7 +25,7 @@ class Battle extends Component {
             .then(res => res.json())
             .then(data => {
                 //console.log(data);
-                if(data.message === 'Not Found') {
+                if (data.message === 'Not Found') {
                     alert("Username not found");
                 }
                 else {
@@ -42,14 +42,14 @@ class Battle extends Component {
             })
     }
 
-    
+
     batchrender(userno) {
         if (userno === 1) {
             if (this.state.gotuser1 === true) {
                 return (
                     <div>
-                    <Batch user={this.state.user1} handleClick={this.handlecross} userno="1" />
-                    {this.state.battled === true ? <BattleCard user={this.state.user1} winner={this.state.winner} id="1"/> : ""}
+                        <Batch user={this.state.user1} handleClick={this.handlecross} userno="1" />
+                        {this.state.battled === true ? <BattleCard user={this.state.user1} winner={this.state.winner} id="1" /> : ""}
                     </div>
                 )
             }
@@ -65,9 +65,9 @@ class Battle extends Component {
         else if (userno === 2) {
             if (this.state.gotuser2 === true) {
                 return (
-                   <div>
-                    <Batch user={this.state.user2} handleClick={this.handlecross} userno="2"/>
-                    {this.state.battled === true ? <BattleCard user={this.state.user2} winner={this.state.winner} id="2"/> : ""}
+                    <div>
+                        <Batch user={this.state.user2} handleClick={this.handlecross} userno="2" />
+                        {this.state.battled === true ? <BattleCard user={this.state.user2} winner={this.state.winner} id="2" /> : ""}
                     </div>
                 )
             }
@@ -85,7 +85,7 @@ class Battle extends Component {
 
 
     handlecross(key) {
-        if(key === '1') {
+        if (key === '1') {
             this.setState(() => {
                 return (
                     {
@@ -96,7 +96,7 @@ class Battle extends Component {
                 )
             })
         }
-        else if(key === '2') {
+        else if (key === '2') {
             this.setState(() => {
                 return (
                     {
@@ -110,8 +110,26 @@ class Battle extends Component {
     }
 
     handleBattle() {
-        if(this.state.gotuser1 === true && this.state.gotuser2 === true){
-            if(this.state.user1.public_repos>this.state.user2.public_repos) {
+        if (this.state.gotuser1 === true && this.state.gotuser2 === true) {
+            let winval1 = 0
+            let winval2 = 0
+            console.log("winvals",winval1, winval2)
+            if (this.state.user1.public_repos > this.state.user2.public_repos) {
+                winval1 += 1
+            }
+
+            else if (this.state.user1.public_repos < this.state.user2.public_repos) {
+                winval2 += 1
+            }
+            console.log("winvals",winval1, winval2)
+            if (this.state.user1.followers > this.state.user2.followers) {
+                winval1 += 1
+            }
+            else if(this.state.user1.followers < this.state.user2.followers) {
+                winval2 += 1
+            }
+            console.log("winvals", winval1, winval2)
+            if (winval1>winval2) {
                 this.setState(() => {
                     return (
                         {
@@ -138,7 +156,7 @@ class Battle extends Component {
             <div>
                 <div id="forms">
                     {this.batchrender(1)}
-                    {this.batchrender(2)} 
+                    {this.batchrender(2)}
                 </div>
                 <button name="battle" id="battleButton" onClick={this.handleBattle}>Battle</button>
             </div>

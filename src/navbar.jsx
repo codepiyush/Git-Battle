@@ -10,7 +10,7 @@ class Navbar extends Component {
             return <p id="navtext">Git battle</p>
         }
         else {
-            return <p id="navtext" style={{color: "black", fontSize:"40px"}}>The Top 30 Repos</p>
+            return <p id="navtext" style={{color: "black", fontSize:"38px"}}>The Top 30 Repos</p>
         }
     }
     render() {
