@@ -74,7 +74,7 @@ class Top extends Component {
                     <Language handleClick={this.fetchData}/>
                 </div>
                 <div id="cardsec">
-                   {this.state.isLoading === true ? <div class="loader">Loading...</div> : this.renderCards()}
+                   {this.state.isLoading === true ? <div className="loader">Loading...</div> : this.renderCards()}
                 </div>
             </div>
         )
