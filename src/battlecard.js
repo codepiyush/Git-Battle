@@ -3,14 +3,13 @@ import React, {Component} from 'react';
 class BattleCard extends Component {
     constructor(props) {
         super();
-        this.showwinner = this.showwinner.bind(this);
+        this.showWinner = this.showWinner.bind(this);
     }
 
-    showwinner() {
+    showWinner() {
         if(this.props.id === this.props.winner){
-            console.log("winer is: " + this.props.winner);
             return (
-                <h3>WINNER</h3>
+                <h3>!!WINNER!!</h3>
             )
         }
         else {
@@ -22,10 +21,9 @@ class BattleCard extends Component {
 
     render() {
         let {avatar_url, name, login, followers, following, public_repos} = this.props.user;
-        console.log(avatar_url, name, login, followers, following, public_repos);
         return (
             <div id="card">
-                {this.showwinner()}
+                {this.showWinner()}
                 <img src={avatar_url} alt="User Avatar"/>
                 <p>Name: {name}</p>
                 <p>Username: {login}</p>
