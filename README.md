@@ -1,4 +1,4 @@
-<h1></h1>
+<h1>Git Battle</h1>
 A project in which people can compete on the basis of their git history.Plople can also see top 10 repos for various languages<br><br>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
