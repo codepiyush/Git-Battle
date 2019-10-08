@@ -1,11 +1,11 @@
-<h1>GIT BATTLE </h1>
+<h1></h1>
 A project in which people can compete on the basis of their git history.Plople can also see top 10 repos for various languages<br><br>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts for this project
 
-In the project directory, we can run:
+In the project directory, you can run:
 
 ### `npm start`
 
