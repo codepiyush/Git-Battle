@@ -3,7 +3,7 @@ A project in which people can compete on the basis of their git history.Plople c
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts for this project
+## Available Scripts
 
 In the project directory, you can run:
 
